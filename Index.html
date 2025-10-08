@@ -8,19 +8,24 @@
 </head>
 <body>
     <header class="header">
-        <div class="logo-div"><img class="logo" src="Logo.png">
-        </div>
-        <div class="search-div">
-            <img class="logo" src="Logo.png">
-            <input class="search-input" type="text" placeholder="Search...">
-            <button class="cancel-button">Cancel</button>
-        </div>
+        <div class="logo-div"><img class="logo" src="Logo.png"></div>
         <div class="user-controls">
             <span class="search">🔍</span>
             <span class="cart">🛒</span>
             <!-- <span class="profile">👻</span> -->
         </div>
+        <div class="search-div">
+             <div class="search-bar-content">
+            <img class="logo" src="Logo.png">
+            <form class="search-form"><input class="search-input" type="text" placeholder="Search..."></form>
+            <button class="cancel-button">Cancel</button>
+        </div>
+            <div class="History-container">
+                <ul class="history-list"></ul>
+        </div>
+        </div>
     </header>
+    <div class="main-content">
     <div class="grid-container">
         <div class="item">
             <img src="shoe1.jpg">
@@ -106,6 +111,7 @@
             <li><a href="#">Privacy Policy</a></li>
         </ul>
     </footer>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
