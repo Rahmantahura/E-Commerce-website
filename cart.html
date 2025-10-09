@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #ffffff;
+            font-family: Arial, sans-serif;
+            padding:  1rem 1rem ;
+        }
+
+        header {
+            padding-bottom: 0.3rem;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .back {
+            font-size: 2rem;
+            cursor: pointer;
+        }
+
+        .cart-div {
+            height: 100%;
+            width: 100%;
+            padding: 1rem;
+            display: grid;
+            grid-template-columns: 2fr 1fr ;
+            margin-top: 2rem;
+        }
+        </style>
+</head>
+<body>
+        <header>
+            <span class="back">⬅️</span>
+        </header>
+        <div class="cart-div">
+            <div class="cart-items"><h2>Cart Items</h2></div>
+            <div class="cart-summary"><h2>Summary</h2></div>
+            <div class="favourites"><h2>Favourites</h2></div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+        const backButton = document.querySelector('.back');
+
+
+        backButton.addEventListener('click', () => {
+            window.history.back();
+        });
+    });
+    </script>
+</body>
+</html>

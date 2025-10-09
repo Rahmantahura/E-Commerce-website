@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const searchInput = document.querySelector('.search-input');
     const searchDiv = document.querySelector('.search-div');
     const searchForm = document.querySelector('.search-form'); 
+    const cart = document.querySelector('.cart');
 
     let searchHistory = [];
     loadHistory();
@@ -45,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     function addHistoryItem(query) {
-        const maxHistoryItems = 5;
+        const maxHistoryItems = 4;
         searchHistory = searchHistory.filter(item => item !== query);
             searchHistory.unshift(query);
             if (searchHistory.length > maxHistoryItems) {
@@ -100,4 +101,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     searchInput.addEventListener('blur', () =>
     mainContent.classList.remove('page-blurred'));
+
+    //SEARCH AND HISTORY FUNCTIONALITY END
+
+    cart.addEventListener('click', () => {
+        window.location.href = 'cart.html';
+    })
 })
